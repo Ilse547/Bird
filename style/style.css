@@ -37,15 +37,6 @@ body {
 
   }
   
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
   .Entry {
     display: flex;
     gap: 15px;
@@ -100,4 +91,53 @@ body {
 .date {
   color: blue;
   font-size: 1px;
+}
+
+@media screen and (max-width: 962px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0; font-size: 5px;}
+
+  .box{
+    width: 150px;
+    height: 220px;
+
+  }
+  .box img {
+    border-radius: 5px;
+    width: 150px;
+    height: 100px;
+  }
+  .box p{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 662px) {
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
+  .box{
+    width: 100px;
+    height: 170px;
+
+  }
+  .box img {
+    border-radius: 2px;
+    width: 100px;
+    height: 50px;
+  }
+  .box p{
+    font-size: 5px;
+  }
 }
