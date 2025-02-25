@@ -18,10 +18,15 @@ Other users cannot modify other users entries
 
 File structure
 ├── img/
+
 ├── style/
 │   ├── styles.css
+
 ├── about.html
+
 ├── home.html
+
 ├── index.html
+
 ├── map.html
 
