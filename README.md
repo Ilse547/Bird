@@ -17,6 +17,7 @@ Other users cannot modify other users entries
 
 
 File structure
+
 ├── img/
 
 ├── style/
