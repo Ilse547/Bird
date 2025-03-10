@@ -1,35 +1,31 @@
-const express = require('express')
+const express = require("express")
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Bird homepage')
-})
+  app.get("/", (req, res) => {
+  res.send("Bird homepage")
+  })
 
-app.get('/.*bird$/', (req, res) => {
+  app.get("/.*bird$/", (req, res) => {
   express.static("About Birds")
 
   })
 
 
 
-  app.get('/users/:birdname', (req, res) => {
-    res.send(req.params)
+  app.get("/birds/:birdname", (req, res) => {
+    const bird = req.params.birdname;
+    res.send(`Looking at a page about the bird: ${bird}`)
   })
 
-  app.route('/bird')
-  .get((req, res) => {
-    res.send('Get a random book')
-  })
-  .post((req, res) => {
-    res.send('Add a book')
-  })
-  .put((req, res) => {
-    res.send('Update the book')
-  })
+  app.get("/welcome/:name", (req, res) => {
+    const name = req.params.name;
+    res.send(`Welcome, ${name}! Hope you enjoy this simple dynamic backend routing`);
+  });
+  
 
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Running on http://localhost:${port}`)
 })
