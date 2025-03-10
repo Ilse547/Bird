@@ -18,7 +18,7 @@ Other users cannot modify other users entries
 The backend routing works as is:\
 / -> "Bird Homepage"\
 /birds/[birdname] -> "Looking at a page about the bird: [birdname]"\
-/welcome/[name] -> "Welcome, [name]! Hope you enjoy this simple dynamic backend routing"
+/welcome/[name] -> "Welcome, [name]! Hope you enjoy this simple dynamic backend routing"\
 To test the backend routing run: `node index.js`
 
 ## Dummy data:
