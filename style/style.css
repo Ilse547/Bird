@@ -30,11 +30,10 @@ body {
     color: #E8E0C8;
   }
   
-  div.content {
+  .content {
     margin-left: 200px;
-    padding: 1px 16px;
+    padding: 16px;
     height: 1000px;
-
   }
   
   .Entry {
@@ -72,16 +71,7 @@ body {
     height: 200px;
   }
 
-  .map{
-    width: auto;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-top: 20px;
-    padding-bottom:20px ;
-    border-radius: 15px ;
-    background-color: #C8A165;
 
-  }
 
   .Discover {
     display: flex;
@@ -91,6 +81,17 @@ body {
 .date {
   color: blue;
   font-size: 1px;
+}
+
+.map{
+  width: auto;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 20px;
+  padding-bottom:20px ;
+  border-radius: 15px ;
+  background-color: #C8A165;
+
 }
 
 
@@ -120,12 +121,11 @@ body {
     position: relative;
   }
   .sidebar a {float: left;}
-  div.content {margin-left: 0; font-size: 5px;}
+  .content {margin-left: 0; font-size: 5px;}
 
   .box{
     width: 150px;
     height: 220px;
-
   }
   .box img {
     border-radius: 5px;
@@ -135,10 +135,11 @@ body {
   .box p{
     font-size: 10px;
   }
+  .content p{
+    font-size: 10px;
+  }
 
   .about {
-    color: #000;
-    background-color: #C8A165;
     padding-left: 7px;
     padding-right: 7px;
     padding-top: 7px;
@@ -150,8 +151,6 @@ body {
   }
   .about p{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
   }
 }
 
@@ -162,8 +161,6 @@ body {
     height: auto;
     position: relative;
   }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
 
   .box{
     width: 100px;
@@ -175,13 +172,8 @@ body {
     width: 100px;
     height: 50px;
   }
-  .box p{
-    font-size: 5px;
-  }
 
   .about {
-    color: #000;
-    background-color: #C8A165;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
@@ -189,11 +181,6 @@ body {
     height: 350px;
     border-radius: 3px;    
     margin: 5px;
-    filter: drop-shadow(2px 2px 2px);
   }
-  .about p{
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-  }
+
 }
