@@ -19,7 +19,8 @@ The backend routing works as is:\
 / -> "Bird Homepage"\
 /...bird/ -> Information about various birds\
 /birds/[birdname] -> "Looking at a page about the bird: [birdname]"\
-/welcome/[name] -> "Welcome, [name]! Hope you enjoy this simple dynamic backend routing"
+/welcome/[name] -> "Welcome, [name]! Hope you enjoy this simple dynamic backend routing"\
+To test the backend routing run: `node index.js`
 
 ## Dummy data:
 The Images named "sml" and "sml2" Were downloaded from the internet and are used as dummy data
