@@ -17,6 +17,7 @@ Other users cannot modify other users entries
 ## Backend Routing:
 The backend routing works as is:\
 / -> "Bird Homepage"\
+/...bird/ -> Information about various birds\
 /birds/[birdname] -> "Looking at a page about the bird: [birdname]"\
 /welcome/[name] -> "Welcome, [name]! Hope you enjoy this simple dynamic backend routing"
 
