@@ -8,18 +8,14 @@ app.use(logger);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.set("views", "./pages");
 app.set("view engine", "ejs");
-app.use('/', express.static('public'));
 
-
-app.get(/.*bird$/, (req, res) => {
-  res.render("birds", { title: "Information about various birds" });
+app.get('/', (request, response) => {
+  const numberOfCookiesInStock = 45
+  response.render('index', {numberOfCookiesInStock: numberOfCookiesInStock})
 });
 
-app.get('/cookies', (req, res) => {
-  console.log(req.query);
-  res.render("cookies", { message: 'Here you soon find all my cookies!' });
-});
 
 app.get("/welcome/:name", (req, res) => {
   const name = req.params.name;
@@ -29,10 +25,9 @@ app.get("/welcome/:name", (req, res) => {
 
 
 // Test area
-const data = require("./data.json");
-app.get("/data", (req, res) => {
-  res.render("data", { title: data.title });
-});
+app.get("/htmlres", (req, res) => {
+  res.send(`<h1>HTML Response</h1>`)
+})
 
 app.post('/contact', (req, res) => {
   console.log('Contact form submission: ', req.body);
