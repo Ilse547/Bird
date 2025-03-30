@@ -2,12 +2,11 @@ const express = require("express")
 const app = express()
 const port = 3000
 
+// the "./" look in the current folder how to tell node the difference between a module you install and 
+const data = require("./data.json");
 
 
-
-  app.get("/", (req, res) => {
-  res.send("Bird homepage")
-  })
+app.use('/', express.static('public'))
 
   app.get(/.*bird$/, (req, res) => {
     res.send("Information about various birds");
@@ -24,7 +23,12 @@ const port = 3000
     const name = req.params.name;
     res.send(`Welcome, ${name}! Hope you enjoy this simple dynamic backend routing`);
   });
+
+  app.get("/data", (req, res) => {
+    res.send (`the product is <strong>${data.title}</strong>`)
+  });
   
+
 
 
 
