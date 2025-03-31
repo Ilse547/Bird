@@ -27,7 +27,7 @@ The Images named "sml" and "sml2" Were downloaded from the internet and are used
 
 ## Run server:
 for dev: `npm run dev`\
-for one time use: `node index.js`\
+for one time use: `node index.js`
 ## MongoDB:
 Start: `sudo systemctl start mongod`\
 Verify: `sudo systemctl status mongod`\
