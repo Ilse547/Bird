@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('includes/head',  {title: 'hi'}) %>
 <body>
-  <header>
-    <h1>Cookieshop</h1>
 
-    <nav>
-      <a href="/">Home</a>&nbsp;|&nbsp;
-      <a href="/about">About</a>&nbsp;|&nbsp;
-      <a href="/cookies">Shop</a>&nbsp;|&nbsp;
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
+<nav class="sidebar">
+  <a href="/birds/new">New</a>
+</nav>
 
-  <main>
-    <p>hello</p>
-    <p>We currently have <%= numberOfCookiesInStock %> cookies in stock.</p>
-  </main>
-  <%- include('includes/footer') %>
+<div class="content">
+  <h1>Discover Entries</h1>
+
+  <div class="Entry">
+    <% if (entries.length > 0) { %>
+      <% entries.forEach(entry => { %>
+        <div class="box">
+          <a href="/birds/<%= entry.slug %>"> <%= entry.name %> </a>
+          <% if (entry.imagePath) { %>
+            <img src="<%= entry.imagePath %>" alt="<%= entry.name %>">
+          <% } %>
+          <p class="info"><strong>Posted by:</strong> <%= entry.user %></p>
+          <p class="date"><strong>Date:</strong> <%= entry.date.toLocaleDateString() %> at <%= entry.time %></p>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <p>No entries found.</p>
+    <% } %>
+  </div>
+</div>
+
 </body>
 </html>

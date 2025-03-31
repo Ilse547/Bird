@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<nav class="sidebar">
+  <a href="/home">Home</a>
+  <a href="/">Your Entries</a>
+  <a class="active" href="/birds/new">New Entry</a>
+  <a href="/about">About</a>
+</nav>
+
+<div class="content">
+  <% if (bird) { %>
+    <h1>Edit Bird Entry: <%= bird.name %></h1>
+    <form action="/birds/<%= bird.slug %>" method="POST">
+      <input type="text" id="name" name="name" value="<%= bird.name %>" required><br/>
+      <input type="date" id="date" name="date" value="<%= bird.date.toISOString().substring(0, 10) %>" required><br/>
+      <input type="time" id="time" name="time" value="<%= bird.time %>" required><br/>
+      <input type="text" id="user" name="user" value="<%= bird.user %>" required><br/>
+      <input type="text" id="img" name="img" value="<%= bird.img %>"><br/>
+      <button type="submit">Update Entry</button>
+    </form>
+    
+  <% } else { %>
+    <p>Bird entry not found.</p>
+  <% } %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<nav class="sidebar">
+  <a href="/">Discover</a>
+  <% if (bird) { %>
+  <a href="/birds/<%= bird.slug %>/edit">Edit</a>
+  <% } %>
+  <a href="/birds/<%= bird.slug %>/del">Delete</a>
+</nav>
+  
+<div class="content">
+  <% if (bird) { %>
+    <h1>Details for <%= bird.name %></h1>
+    <div class="bird-details">
+      <p><strong>Name:</strong> <%= bird.name %></p>
+      <% if (bird.img) { %>
+        <img src="<%= bird.img %>" alt="<%= bird.name %>">
+      <% } %>
+      <p><strong>Slug:</strong> <%= bird.slug %></p>
+      <p><strong>Date:</strong> <%= bird.date.toLocaleDateString() %> at <%= bird.time %></p>
+      <p><strong>Posted by:</strong> <%= bird.user %></p>
+    </div>
+  <% } else { %>
+    <p>Bird entry not found.</p>
+  <% } %>
+</div>
+
+</body>
+</html>
