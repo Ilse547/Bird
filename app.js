@@ -5,6 +5,10 @@ import { logger } from './middleware/logger.js';
 const app = express();
 const port = 3000;
 
+mongoose.connect('mongodb://localhost:27017/cookieshop')
+  .then(() => console.log('mongodb connected'))
+  .catch(error => console.error(error))
+
 const cookies = [
   { name: "Chocolate Chip", slug: "chocolate-chip", stock: true },
   { name: "Banana", slug: "banana", stock: false }
