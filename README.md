@@ -25,6 +25,9 @@ To test the backend routing run: `node index.js`
 ## Dummy data:
 The Images named "sml" and "sml2" Were downloaded from the internet and are used as dummy data
 
+## CRUD and Databases
+
+
 ## Run server:
 for dev: `npm run dev`\
 for one time use: `node index.js`
