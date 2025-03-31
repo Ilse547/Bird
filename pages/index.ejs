@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookieshop</title>
-</head>
+<%- include('includes/head',  {title: 'hi'}) %>
 <body>
   <header>
     <h1>Cookieshop</h1>
@@ -18,12 +14,9 @@
   </header>
 
   <main>
-    <p>Welcome to my cookieshop. 👋</p>
+    <p>hello</p>
     <p>We currently have <%= numberOfCookiesInStock %> cookies in stock.</p>
   </main>
-
-  <footer>
-    Made with 🍪 by Codecookies
-  </footer>
+  <%- include('includes/footer') %>
 </body>
 </html>
