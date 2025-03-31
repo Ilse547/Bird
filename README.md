@@ -25,9 +25,9 @@ To test the backend routing run: `node index.js`
 ## Dummy data:
 The Images named "sml" and "sml2" Were downloaded from the internet and are used as dummy data
 
-## Run:
-npm run dev\
-node index.js\
+## Run server:
+for dev: `npm run dev`\
+for one time use: `node index.js`\
 ## MongoDB:
 Start: `sudo systemctl start mongod`\
 Verify: `sudo systemctl status mongod`\
