@@ -1,10 +1,10 @@
 import express, { response } from 'express';
 import mongoose from 'mongoose';
 import { logger } from './middleware/logger.js';
+import 'dotenv/config'
 const app = express();
-const port = 3000;
 
-mongoose.connect('mongodb://localhost:27017/birdwatch')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('mongodb connected'))
   .catch(error => console.error(error));
 const birdSchema = new mongoose.Schema({
@@ -15,6 +15,7 @@ const birdSchema = new mongoose.Schema({
   user: { type: String, required: true},
   img:  { type: String, required: false}
 });
+
 
 const Bird = mongoose.model('Bird', birdSchema);
 
@@ -129,6 +130,6 @@ app.get("/welcome/:name", (req, res) => {
 });
 
 // Start server
-app.listen(port, () => {
-  console.log(`Running on http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Running on http://localhost:${process.env.PORT}`);
 });
