@@ -130,6 +130,6 @@ app.get("/welcome/:name", (req, res) => {
 });
 
 // Start server
-app.listen(process.env.PORT, () => {
-  console.log(`Running on http://localhost:${process.env.PORT}`);
+app.listen(process.env.PORT, '0.0.0.0', () => {
+  console.log(`Running on ${process.env.PORT}`);
 });
