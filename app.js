@@ -4,7 +4,7 @@ import { logger } from './middleware/logger.js';
 import 'dotenv/config'
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI2)
   .then(() => console.log('mongodb connected'))
   .catch(error => console.error(error));
 const birdSchema = new mongoose.Schema({
