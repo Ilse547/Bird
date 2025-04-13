@@ -1,23 +1,11 @@
 import express, { response } from 'express';
-import mongoose from 'mongoose';
+import './config/database.js'
+import { Bird } from './models/Bird.js';
 import { logger } from './middleware/logger.js';
-import 'dotenv/config'
+import { PORT } from './config/app.js'
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('mongodb connected'))
-  .catch(error => console.error(error));
-const birdSchema = new mongoose.Schema({
-  slug: { type: String, unique: true, required: true},
-  name: { type: String, required: true},
-  date: { type: Date, required: true},
-  time: { type: String, required: true},
-  user: { type: String, required: true},
-  img:  { type: String, required: false}
-});
 
-
-const Bird = mongoose.model('Bird', birdSchema);
 
 
 app.use(logger);
@@ -131,5 +119,5 @@ app.get("/welcome/:name", (req, res) => {
 
 // Start server
 app.listen(process.env.PORT, '0.0.0.0', () => {
-  console.log(`Running on ${process.env.PORT}`);
+  console.log(`Running on ${PORT}`);
 });
