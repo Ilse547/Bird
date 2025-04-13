@@ -1,4 +1,5 @@
-This project is a web app to track bird sightings by different users.
+This project is a web app to track bird sightings by different users.\
+It uses a MongoDB database with the mongoose plugin, An express backend and EJS to display dynamic HTML.
 
 
 ## Features:
