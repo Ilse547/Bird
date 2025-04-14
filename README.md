@@ -79,24 +79,25 @@ The wesite is deployed using the free tier of render.com, if it was not accessed
 
 ## **Folder Structure**
 Here’s the project structure for better understanding:
-```plaintext
+```
 bird-sightings-tracker/
-├── public/                     # Static files
-│   ├── img/                    # Images for bird sightings
-│   ├── style/                  # CSS files
-│   │   └── style.css           # Main stylesheet
-├── views/                      # EJS templates
-│   ├── index.ejs               # Homepage template
-│   ├── bird.ejs                # Bird details template
-│   ├── sightings.ejs           # Sightings list template
-├── controllers/                # Backend route handlers
-│   ├── bird.js                 # Routes for bird CRUD operations
-│   ├── simple_bird.js          # Simple routes (e.g., welcome message)
-│   └── users.js                # Placeholder for user-related routes
-├── models/                     # Database models
-│   └── Bird.js                 # Mongoose schema for bird sightings
-├── .env                        # Environment variables
-├── app.js                      # Main server file
-├── package.json                # Project metadata and dependencies
-├── package-lock.json           # Dependency lock file
-└── README.md                   # Project documentation
+├── public/
+│   ├── img/
+│   ├── style/
+│   │   └── style.css
+├── views/
+│   ├── index.ejs
+│   ├── bird.ejs
+│   ├── sightings.ejs
+├── controllers/
+│   ├── bird.js
+│   ├── simple_bird.js
+│   └── users.js
+├── models/
+│   └── Bird.js
+├── .env
+├── app.js
+├── package.json
+├── package-lock.json
+└── README.md
+```
