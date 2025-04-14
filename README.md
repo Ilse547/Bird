@@ -75,29 +75,3 @@ These variables should be defined in a `.env` file.
 ## **Deployed Website**
 The wesite is deployed using the free tier of render.com, if it was not accessed by anyone for some time, it may need to boot up again and might take some time until it loads correctly.
 - [Deployed website](https://bird-nst6.onrender.com/)
-
-
-## **Folder Structure**
-Here’s the project structure for better understanding:
-```
-bird-sightings-tracker/
-├── public/
-│   ├── img/
-│   ├── style/
-│   │   └── style.css
-├── views/
-│   ├── index.ejs
-│   ├── bird.ejs
-│   ├── sightings.ejs
-├── controllers/
-│   ├── bird.js
-│   ├── simple_bird.js
-│   └── users.js
-├── models/
-│   └── Bird.js
-├── .env
-├── app.js
-├── package.json
-├── package-lock.json
-└── README.md
-```
