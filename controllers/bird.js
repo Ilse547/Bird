@@ -51,14 +51,16 @@ router.get('/birds/:slug', async (request, response) => {
       const bird = await Bird.findOne({ slug: slug }).exec();
 
       if (!bird) {
-          return response.status(404);
+          return response.status(404).send('bird entry not found');
       }
+
       response.render('birds/show', { bird: bird });
   } catch (error) {
       console.error(error);
-      response.status(500).send('An error occurred while fetching the bird entry.');
+      response.status(500).send('there was an error');
   }
 });
+
 
   
 //edit a bird entry CRU
