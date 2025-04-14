@@ -28,7 +28,7 @@ app.use(simpleroutes)
 
 
 
-app.listen(process.env.PORT || 4000, 'localhost', () => {
+app.listen(process.env.PORT || 3000, 'localhost', () => {
   console.log(`Running on http://localhost:${process.env.PORT || 3000}`);
 });
 
