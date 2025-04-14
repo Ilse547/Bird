@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('../includes/head', {title: "Edit"}) %>
+
 <body>
 
 <nav class="sidebar">
@@ -9,7 +11,7 @@
 
 <div class="content">
   <% if (bird) { %>
-    <h1>Edit Bird Entry: <%= bird.name %></h1>
+    <h1 class="center">Edit Bird Entry: <%= bird.name %></h1>
     <form action="/birds/<%= bird.slug %>" method="POST">
       <input type="text" id="name" name="name" value="<%= bird.name %>" required><br/>
       <input type="date" id="date" name="date" value="<%= bird.date.toISOString().substring(0, 10) %>" required><br/>

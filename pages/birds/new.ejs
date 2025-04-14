@@ -2,9 +2,12 @@
 <html lang="en">
 <%- include('../includes/head', {title: "New Bird Entry | Birdwatch"}) %>
 <body>
-
+  <nav class="sidebar">
+    <a href="/">Your Entries</a>
+  </nav>
+  
   <main>
-    <h2>Create a new bird entry</h2>
+    <h2 class="center">Create a new bird entry</h2>
 
     <form action="/birds" method="POST">
       <input type="text" name="name" placeholder="Bird Name" required /><br/>
@@ -16,7 +19,5 @@
       <button>Save</button>
     </form>
   </main>
-
-  <%- include('../includes/footer') %>
 </body>
 </html>
