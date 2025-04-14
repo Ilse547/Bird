@@ -13,8 +13,8 @@ router.get('/birds/new', (request, response) => {
 router.post('/birds', async (request, response) => {
 try {
     const bird = new Bird({
-        slug: request.body.slug,
-        name: request.body.name,
+        slug: request.body.slug.trim(),
+        name: request.body.name.trim(),
         date: new Date(request.body.date),
         time: request.body.time,
         user: request.body.user,
