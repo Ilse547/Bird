@@ -5,13 +5,10 @@ A web application for tracking bird sightings by different users. The app allows
 ---
 
 ## **Features**
-- **Log Bird Sightings**: Users can log bird sightings with details such as name, date, time, and location.
-- **Upload Photos**: Attach photos of the bird sightings for a richer experience.
-- **Location Mapping**: Record the approximate location of the sighting.
-- **User-Friendly Interface**: Simple and responsive design for easy navigation.
-- **Privacy Options**: Choose to share sightings publicly or keep them private.
-- **View Public Sightings**: See sightings shared by other users.
-- **Secure Data**: Users cannot edit or modify entries made by others.
+- **Log Bird Sightings**: Users can log bird sightings with details such as name, date, time, and location
+- **Upload Photos**: Attach photos of the bird sightings for a richer experience
+- **View Public Sightings**: See sightings shared by other users
+- **Secure Data**: Users cannot edit or modify entries made by others (NO users yet)
 
 ---
 
@@ -60,6 +57,25 @@ The app requires the following environment variables:
 These variables should be defined in a `.env` file.
 
 ---
+
+## **Run server**
+- for dev: `npm run dev`
+- for one time use: `node index.js`
+
+---
+
+## **MongoDB**
+- Start: `sudo systemctl start mongod`
+- Verify: `sudo systemctl status mongod`
+- Stop: `sudo systemctl stop mongod`
+- Restart: `sudo systemctl restart mongod`
+
+---
+
+## **Deployed Website**
+The wesite is deployed using the free tier of render.com, if it was not accessed by anyone for some time, it may need to boot up again and might take some time until it loads correctly.
+- [Deployed website](https://bird-nst6.onrender.com/)
+
 
 ## **Folder Structure**
 Here’s the project structure for better understanding:
