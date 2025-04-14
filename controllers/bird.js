@@ -46,7 +46,7 @@ router.get('/', async (request, response) => {
 });
   
 //read specific bird entry
-router.get('/birds/:slug', async (request, response) => {
+/* router.get('/birds/:slug', async (request, response) => {
     try {
       const slug = request.params.slug;
       const bird = await Bird.findOne({ slug: slug }).exec();
@@ -58,7 +58,23 @@ router.get('/birds/:slug', async (request, response) => {
       console.error(error);
       response.status(404).send('Could not find the bird entry you\'re looking for.');
     }
+}); */
+
+router.get('/birds/:slug', async (request, response) => {
+  try {
+      const slug = request.params.slug;
+      const bird = await Bird.findOne({ slug: slug }).exec();
+
+      if (!bird) {
+          return response.status(404).render('error', { message: 'No entry with that name' });
+      }
+      response.render('birds/show', { bird: bird });
+  } catch (error) {
+      console.error(error);
+      response.status(500).send('An error occurred while fetching the bird entry.');
+  }
 });
+
   
 //edit a bird entry CRU
 router.get('/birds/:slug/edit', async (request, response) => {
