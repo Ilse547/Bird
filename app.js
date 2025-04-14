@@ -22,13 +22,13 @@ app.use(simpleroutes)
 
 
 // Start server
-/*app.listen(process.env.PORT, '0.0.0.0', () => {
+app.listen(process.env.PORT, '0.0.0.0', () => {
   console.log(`Running on ${PORT}`);
-});*/
-
-
-
-app.listen(process.env.PORT || 3000, 'localhost', () => {
-  console.log(`Running on http://localhost:${process.env.PORT || 3000}`);
 });
+
+
+
+/*app.listen(process.env.PORT || 3500, 'localhost', () => {
+  console.log(`Running on http://localhost:${process.env.PORT || 3000}`);
+});*/
 
